@@ -1,25 +1,21 @@
 {
   "canisters": {
-    "AIMUTEC_backend": {
-      "main": "src/AIMUTEC_backend/main.mo",
+    "backend": {
+      "main": "src/backend/main.mo",
       "type": "motoko"
     },
-    "AIMUTEC_frontend": {
-      "dependencies": [
-        "AIMUTEC_backend"
-      ],
-      "source": [
-        "src/AIMUTEC_frontend/assets"
-      ],
+    "frontend": {
+      "frontend": {
+        "entrypoint": "src/frontend/out/index.html"
+      },
+      "source": ["src/frontend/out"],
       "type": "assets"
     }
   },
   "defaults": {
     "build": {
-      "args": "",
       "packtool": ""
     }
   },
-  "output_env_file": ".env",
   "version": 1
 }
